@@ -24,11 +24,11 @@
           }
         },
         "url": {
-          "raw": "localhost:8089/estudiantes",
+          "raw": "localhost:8090/estudiantes",
           "host": [
             "localhost"
           ],
-          "port": "8089",
+          "port": "8090",
           "path": [
             "estudiantes"
           ]
@@ -54,11 +54,11 @@
           }
         },
         "url": {
-          "raw": "localhost:8089/estudiantes",
+          "raw": "localhost:8090/estudiantes",
           "host": [
             "localhost"
           ],
-          "port": "8089",
+          "port": "8090",
           "path": [
             "estudiantes"
           ]
@@ -75,11 +75,11 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "localhost:8089/estudiantes",
+          "raw": "localhost:8090/estudiantes",
           "host": [
             "localhost"
           ],
-          "port": "8089",
+          "port": "8090",
           "path": [
             "estudiantes"
           ]
