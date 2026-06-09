@@ -1,0 +1,135 @@
+{
+  "info": {
+    "_postman_id": "0396c379-08b5-4f74-a934-5d600e9ca83d",
+    "name": "G01-APOO-26-1-FINISHED",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55554594"
+  },
+  "item": [
+    {
+      "name": "Módulo de Autenticación",
+      "item": [
+        {
+          "name": "Obtener todos los estudiantes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8090/estudiantes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "estudiantes"
+              ]
+            },
+            "description": "# **Retorna la lista completa de estudiantes registrados en la base de datos.**"
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener estudiante por id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8090/estudiantes/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "estudiantes",
+                "1"
+              ]
+            },
+            "description": "# **Retorna un estudiante en especifico segun el ID proporcionado en la URL si no exixte, retorna null.**"
+          },
+          "response": []
+        },
+        {
+          "name": "Crear un estudiante",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"nombres\": \"carlos forero\",\r\n\"correo\" : \"carlos@gmail.com\",\r\n\"numero_telefono\": \"3108662386\",\r\n\"direccion\" : \"cra 5 D sur # 27-29\",\r\n\"carrera\": \"inegeniaria de sistemas\",\r\n\"semestre\": \"4\",\r\n\"activo\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/estudiantes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "estudiantes"
+              ]
+            },
+            "description": "# **Crea un nuevo estudiante en la base de datos. Recibe un JSON en los campos : nombres, correo, numeroTelefono, direccion, carrera, semestre y activo.**"
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar un estudiante",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 1,\r\n  \"nombres\": \"Carlos Forero Actualizado\",\r\n  \"correo\": \"carlos@gmail.com\",\r\n  \"numeroTelefono\": \"3188662386\",\r\n  \"direccion\": \"Cra 5D sur 27-29\",\r\n  \"carrera\": \"Ingenieria de sistemas\",\r\n  \"semestre\": \"5\",\r\n  \"activo\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8090/estudiantes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "estudiantes"
+              ]
+            },
+            "description": "# **Actualiza los datos de un estudiante existente. Recibe un JSON con todos los campos incluyendo el ID del estudiante a modificar.**"
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar un estudiante",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8090/estudiantes/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8090",
+              "path": [
+                "estudiantes",
+                "1"
+              ]
+            },
+            "description": "# **Elimina un estudiante segun el ID proporcionado por la URL . Retorna 200 si fue eliminado o 404 si no existía .**"
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
